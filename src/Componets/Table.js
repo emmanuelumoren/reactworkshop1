@@ -12,8 +12,10 @@ const Table=()=> {
         {id: 7, firstName: "Ruth", lastName: "Joe", age: 64, birthDay:"1963-03-05", country: "Maxico", city: "Maxicocity" }
 
     ];
-
-
+// States> Studentlis is taking the objects from initalstate
+// ShowData > useState returns an boolean false or true button details.
+// studentDefaultData using the variables from the object student to use for the showdata and more
+//
     const [studentList, setStudentList] = useState(initailData);
     const [showData, setShowData] = useState(false);
     const studentDefaultData = {id: 0, firstName: "", lastName: "", age: 0, birthDay: "", country: "", city: "" };
@@ -98,13 +100,10 @@ const Table=()=> {
                         <button type="button" className="btn btn-info" onClick={() => {setShowData(false); setStudent(studentDefaultData) }}>Hide info</button>
 
                     </div>
-                    
-
-                    </div>
+                </div>
                 }
 
-            
-            
+    
             </Fragment>
            
             
@@ -124,7 +123,6 @@ const Table=()=> {
             </TableChildren>
             <br/>
             <ShowStudentDetails/>
-
             
         </div>
     );
